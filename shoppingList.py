@@ -2,35 +2,22 @@
 
 shoppingList = []
 
-applicationStatus = True
+print("============SHOPPING LIST============\n\n")
+print("TO QUIT THE APPLICATION TYPE : 'quit'\n\n")
 
-while applicationStatus:
 
-    item = input("Insert item in the shopping list: ").lower()
+while True:
+
+    item_to_buy = input("Insert item > ").lower()
+
+    if item_to_buy == 'quit':
+        break
+
+    shoppingList.append(item_to_buy)
+
+print("\n\nThe list content is : \n\n")
+
+for item in shoppingList:
     
-    shoppingList.append(item)
-
-    print("You have in the shopping list: ", shoppingList)
-
-    promptDelete = input("Do you want to delete an item from the list? 'Yes' / 'No' : ").lower()
-
-    if promptDelete == "yes":
-
-        itemToDelete = input("Enter the name of the item you want to delete: ").lower()
-
-        if itemToDelete not in shoppingList:
-
-            print("Item is not in list!")
-
-        else:
-
-            shoppingList.remove(itemToDelete)
-
-            print("The new list content is: ", shoppingList)
-    else:
-        
-        quit =  input("Quit application? 'Yes' / 'No' : ").lower()
-
-        if quit == "yes":
-
-            applicationStatus = False
+    print(item + "\n\n")
+   
