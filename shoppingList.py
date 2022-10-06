@@ -7,7 +7,7 @@ applicationStatus = True
 while applicationStatus:
 
     item = input("Insert item in the shopping list: ").lower()
-
+    
     shoppingList.append(item)
 
     print("You have in the shopping list: ", shoppingList)
@@ -34,4 +34,3 @@ while applicationStatus:
         if quit == "yes":
 
             applicationStatus = False
-
