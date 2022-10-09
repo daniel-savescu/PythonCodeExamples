@@ -42,5 +42,5 @@ for item in shoppingList:
         file_object.write(
             "Date: " + today.strftime("%B %d, %Y") +
             "\tItem: " + item + "\n")
-print("\n\nAlso check the file.txt on your local machine!")
+print("\n\nAlso check the items.txt on your local machine!")
 # =================================================
