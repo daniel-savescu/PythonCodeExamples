@@ -24,9 +24,15 @@ while True:
     if item_to_buy == 'quit':
         break
     shoppingList.append(item_to_buy)
-print("\n\nThe list content is : \n\n")
+print("\n\nThe list content is : \n")
+
 # =================================================
 
+# Print shopping list to console ==================
+for item in shoppingList:
+    print("\n",item)
+
+# =================================================
 
 # Create file if not exist ========================
 # Add list in text file ===========================
@@ -36,4 +42,5 @@ for item in shoppingList:
         file_object.write(
             "Date: " + today.strftime("%B %d, %Y") +
             "\tItem: " + item + "\n")
+print("\n\nAlso check the file.txt on your local machine!")
 # =================================================
