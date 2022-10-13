@@ -5,8 +5,10 @@
 # =-----------------------------------------------
 
 # Imports libraries ==============================
+from curses.ascii import isalpha
 from datetime import date
 from multiprocessing.sharedctypes import Value
+from typing import Type
 # ================================================
 
 
@@ -16,6 +18,7 @@ shoppingList = []
 shoppingListPrice = []
 shoppingDict = {}
 total = 0.00
+item_price = 0
 # ================================================
 
 # Insert items ===================================
@@ -24,7 +27,7 @@ total = 0.00
 while True:
     print("\n============SHOPPING LIST============\n")
     print("TO QUIT THE APPLICATION TYPE : 'quit'\n")
-    print("TYPE name item to remove from list.\n\n")
+    print("TYPE : 'remove' to delete an item from the .\n\n")
     for k in shoppingList:
         print("You have added the product: " + k)
 
@@ -33,18 +36,21 @@ while True:
         break
     elif item_to_buy != 'remove':
         try:
-            item_price = input("\tPrice: ")
-            item_price = int(item_price)
-        except:
-            print("Type ony digits")
+            item_price = float(input("\tPrice: "))
+        except ValueError:
+            print("Type only numbers!")
         shoppingListPrice.append(str(item_price))
-
     shoppingList.append(item_to_buy)
-    if item_to_buy == "remove":
+    if item_to_buy == 'remove':
         shoppingList.remove(item_to_buy)
         item_to_buy = input("\n\tDelete item > ").lower()
-        shoppingList.remove(item_to_buy)
-
+        if item_to_buy not in shoppingList:
+            print("\n\tItem not in list")
+        else:
+            shoppingList.remove(item_to_buy)
+        
+            
+   
 
 # =================================================
 
