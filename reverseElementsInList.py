@@ -1,4 +1,5 @@
 # Reverse Elements In Python List
+# Python verios : 3.9.6
 
 originalList = []
 
