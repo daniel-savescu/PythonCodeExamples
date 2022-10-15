@@ -2,8 +2,10 @@
 
 originalList = []
 
-numberOfElements = int(input("Enter the number of elements of you want to enter into the list : "))
-
+try:
+    numberOfElements = int(input("Enter the number of elements of you want to enter into the list : "))
+except ValueError:
+    print("Enter only integer")
 for index in range(0,numberOfElements):
     elementValue = int(input("Enter element value : \n"))
     originalList.append(elementValue)
