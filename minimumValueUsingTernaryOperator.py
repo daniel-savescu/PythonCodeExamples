@@ -1,4 +1,4 @@
-#Read Three Intereger And Find The Miminum Value
+# Program : Read Three Intereger And Find The Miminum Value
 
 try:
     
