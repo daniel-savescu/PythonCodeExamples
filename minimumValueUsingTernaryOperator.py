@@ -1,4 +1,5 @@
 # Program : Read Three Intereger And Find The Miminum Value
+# Python version : 3.9.6 
 
 try:
     
