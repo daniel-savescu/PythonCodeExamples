@@ -1,4 +1,5 @@
-# Reverse String in Python
+# Program : Reverse String in Python
+# Python version : 3.9.6
 
 originalString = input("Enter a string : ")
 
